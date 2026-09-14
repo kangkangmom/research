@@ -14,6 +14,14 @@
   --link-blue: #1d5c86;
   --link-blue-dark: #133f5c;
 
+  --warm: #d97a4d;
+  --warm-dark: #b85c31;
+  --tint-peach: #fbe9df;
+  --tint-sage: #eaf0e6;
+  --tint-sand: #f6efe1;
+  --tint-sky: #e9eff2;
+  --sage: #6f8259;
+
   --display: "Archivo Black", "Inter", sans-serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
   --serif-italic: "Newsreader", "Noto Serif KR", serif;
@@ -660,6 +668,221 @@ section.tight {
   margin-top: 14px;
 }
 
+/* ---------- homepage: big hero panel (Terrer Lab-inspired) ---------- */
+
+.big-hero {
+  padding: 28px 0 20px;
+}
+
+.big-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.86fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.big-hero h1 {
+  font-size: clamp(30px, 3.6vw, 44px);
+  font-weight: 800;
+  line-height: 1.22;
+  margin-top: 16px;
+}
+
+.big-hero .lede {
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.pill-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1.5px solid var(--warm);
+  background: var(--warm);
+  color: #ffffff;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-pill:hover {
+  background: var(--warm-dark);
+  border-color: var(--warm-dark);
+  transform: translateY(-1px);
+}
+
+.btn-pill.outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn-pill.outline:hover {
+  border-color: var(--ink);
+  background: transparent;
+}
+
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4 / 3.3;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(155deg, var(--tint-peach) 0%, var(--tint-sand) 55%, var(--tint-sage) 100%);
+}
+
+.hero-visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- big questions ---------- */
+
+.question-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.question-card {
+  border-radius: 22px;
+  padding: 32px;
+  background: var(--tint-peach);
+}
+
+.question-card.sage {
+  background: var(--tint-sage);
+}
+
+.question-card.sand {
+  background: var(--tint-sand);
+}
+
+.question-card.sky {
+  background: var(--tint-sky);
+}
+
+.question-card .q-mark {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 30px;
+  color: var(--warm-dark);
+  line-height: 1;
+}
+
+.question-card.sage .q-mark {
+  color: var(--sage);
+}
+
+.question-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 12px;
+}
+
+.question-card p {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  margin-top: 12px;
+}
+
+.question-card .text-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13.5px;
+}
+
+/* ---------- stat chips ---------- */
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.stat-chip {
+  border-radius: 18px;
+  background: var(--tint-sand);
+  padding: 22px 20px;
+  text-align: center;
+}
+
+.stat-chip b {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.stat-chip span {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+/* ---------- culture band ---------- */
+
+.culture-band {
+  border-radius: 28px;
+  background: var(--tint-sage);
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.culture-band h2 {
+  font-size: 26px;
+}
+
+.culture-band p {
+  color: var(--ink-soft);
+  margin-top: 14px;
+  max-width: 60ch;
+}
+
+/* ---------- news teaser cards ---------- */
+
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.news-card {
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.news-card .date {
+  font-size: 12.5px;
+  color: var(--warm-dark);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.news-card h4 {
+  font-family: var(--sans);
+  font-size: 15.5px;
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {
@@ -725,5 +948,32 @@ section.tight {
 
   section {
     padding: 44px 0;
+  }
+
+  .big-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    aspect-ratio: 16 / 10;
+    order: -1;
+  }
+
+  .question-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .culture-band {
+    grid-template-columns: 1fr;
+    padding: 32px;
+    text-align: left;
+  }
+
+  .news-cards {
+    grid-template-columns: 1fr;
   }
 }
