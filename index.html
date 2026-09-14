@@ -9,14 +9,14 @@
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=Newsreader:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=Newsreader:ital@1&family=Fraunces:ital,wght@0,600;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand">Hey Consumer Lab</a>
+    <a href="index.html" class="brand"><span class="brand-hey">Hey<svg viewBox="0 0 90 50" aria-hidden="true"><path d="M8,26 C6,10 24,4 45,4 C68,4 84,10 82,25 C80,42 62,46 45,46 C22,46 10,40 8,26 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></span> Consumer Lab</a>
     <nav class="nav-links">
       <a href="research.html">Research</a>
       <a href="people.html">People</a>
@@ -31,50 +31,33 @@
 
 <main>
 
-  <section class="big-hero">
+  <section class="bold-hero">
     <div class="wrap">
-      <div class="big-hero-grid">
+      <div class="hero-row">
         <div>
           <span class="eyebrow">Consumer Psychology &amp; Decision Science</span>
-          <h1>How do people decide what to buy — and can we help them choose better?</h1>
+          <h1>So... why did you <em>actually</em> buy that?</h1>
           <p class="lede">Hey Consumer Lab studies the everyday psychology of shopping, choice, and consumption — from a two-second grocery pick to trusting an AI's advice. We combine behavioral experiments, computational modeling, and real-world field studies to find out.</p>
           <div class="pill-row">
-            <a href="research.html" class="btn-pill">Explore our research</a>
+            <a href="research.html" class="btn-pill coral">Explore our research</a>
             <a href="people.html" class="btn-pill outline">Meet the team</a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <svg viewBox="0 0 400 330" role="img" aria-label="Abstract graphic of overlapping circles, a shopping bag outline, and an upward decision trend line">
-            <circle cx="70" cy="70" r="90" fill="#ffffff" opacity="0.35"/>
-            <circle cx="330" cy="260" r="120" fill="#6f8259" opacity="0.14"/>
-            <circle cx="300" cy="60" r="46" fill="#d97a4d" opacity="0.18"/>
-            <circle cx="90" cy="270" r="60" fill="#ffffff" opacity="0.45"/>
-
-            <g transform="translate(215,150)" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.62">
-              <path d="M-38,-14 L38,-14 L32,92 L-32,92 Z"/>
-              <path d="M-20,-14 C-20,-40 20,-40 20,-14"/>
-            </g>
-
-            <g stroke="#b85c31" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8">
-              <path d="M56,232 C110,232 96,150 150,150 C190,150 176,96 236,84" stroke-dasharray="1 9"/>
-            </g>
-            <circle cx="56" cy="232" r="5" fill="#b85c31"/>
-            <circle cx="150" cy="150" r="5" fill="#b85c31"/>
-            <circle cx="236" cy="84" r="6" fill="#b85c31"/>
-
-            <circle cx="120" cy="60" r="4" fill="#6f8259" opacity="0.7"/>
-            <circle cx="150" cy="42" r="3" fill="#d97a4d" opacity="0.7"/>
-            <circle cx="330" cy="180" r="4" fill="#6f8259" opacity="0.6"/>
-          </svg>
+        <div class="hero-scene">
+          <div class="bubble-card coral" style="min-height:300px; display:flex; align-items:center;">
+            <p style="font-family:var(--serif-display); font-style:italic; font-weight:600; font-size:clamp(22px,2.6vw,28px); line-height:1.4; margin:0;">"I don't know, it just felt right."</p>
+          </div>
+          <div class="sticker dark" style="position:absolute; top:-16px; left:-20px;"><b>04</b><span>Research themes</span></div>
+          <div class="sticker paper" style="position:absolute; bottom:-18px; right:-14px;"><b>10+</b><span>Lab members</span></div>
         </div>
       </div>
 
       <div class="stat-row">
-        <div class="stat-chip"><b>04</b><span>Research themes</span></div>
-        <div class="stat-chip"><b>10+</b><span>Lab members</span></div>
         <div class="stat-chip"><b>1,000+</b><span>Participants / year</span></div>
         <div class="stat-chip"><b>2024</b><span>Lab founded</span></div>
+        <div class="stat-chip"><b>4</b><span>Research themes</span></div>
+        <div class="stat-chip"><b>10+</b><span>Lab members</span></div>
       </div>
     </div>
   </section>
@@ -86,27 +69,23 @@
         <a href="research.html" class="see-all">All research</a>
       </div>
 
-      <div class="question-grid">
-        <div class="question-card">
-          <div class="q-mark">?</div>
+      <div class="bubble-grid">
+        <div class="bubble-card coral">
           <h3>Why do we trust a stranger's five-star review more than our own judgment?</h3>
           <p>We study how social proof and algorithmic recommendations override — or sharpen — our own preferences.</p>
           <a href="research.html" class="text-link">Learn more →</a>
         </div>
-        <div class="question-card sage">
-          <div class="q-mark">?</div>
+        <div class="bubble-card dark">
           <h3>Can an algorithm nudge us toward better choices — or just more of them?</h3>
           <p>We examine how recommendation systems and generative AI shape trust, discovery, and purchase behavior.</p>
           <a href="research.html" class="text-link">Learn more →</a>
         </div>
-        <div class="question-card sand">
-          <div class="q-mark">?</div>
+        <div class="bubble-card paper">
           <h3>What makes a brand feel like part of who we are?</h3>
           <p>We investigate how self-concept and social identity drive brand attachment and status consumption.</p>
           <a href="research.html" class="text-link">Learn more →</a>
         </div>
-        <div class="question-card sky">
-          <div class="q-mark">?</div>
+        <div class="bubble-card paper">
           <h3>Why do we say we care about sustainability, but shop like we don't?</h3>
           <p>We test interventions that help close the gap between good intentions and everyday purchasing behavior.</p>
           <a href="research.html" class="text-link">Learn more →</a>
@@ -117,12 +96,12 @@
 
   <section class="tight">
     <div class="wrap">
-      <div class="culture-band">
+      <div class="culture-band bold">
         <div>
           <h2>A lab culture built on curiosity, not credentials.</h2>
           <p>We welcome people from every background and stage — undergraduate to postdoc — who are curious about why people choose what they choose. Mentorship and collaboration come first; publication record comes from doing good work together.</p>
         </div>
-        <a href="join.html" class="btn-pill">Join us →</a>
+        <a href="join.html" class="btn-pill coral">Join us →</a>
       </div>
     </div>
   </section>

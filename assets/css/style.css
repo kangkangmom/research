@@ -22,7 +22,13 @@
   --tint-sky: #e9eff2;
   --sage: #6f8259;
 
+  --brand: #ff4d2e;
+  --brand-dark: #d43616;
+  --brand-tint: #fff0ea;
+  --paper-cream: #fffaf3;
+
   --display: "Archivo Black", "Inter", sans-serif;
+  --serif-display: "Fraunces", "Newsreader", serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
   --serif-italic: "Newsreader", "Noto Serif KR", serif;
 
@@ -883,6 +889,227 @@ section.tight {
   line-height: 1.4;
 }
 
+/* ---------- signature "Hey" wordmark ---------- */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.brand-hey {
+  position: relative;
+  color: var(--brand);
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 0 3px;
+}
+
+.brand-hey svg {
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: -30%;
+  bottom: -35%;
+  width: calc(100% + 12px);
+  height: calc(100% + 22%);
+  z-index: -1;
+}
+
+/* ---------- bold hero (signature identity) ---------- */
+
+.bold-hero {
+  padding: 40px 0 8px;
+}
+
+.bold-hero .eyebrow {
+  color: var(--brand-dark);
+}
+
+.bold-hero h1 {
+  font-family: var(--serif-display);
+  font-weight: 600;
+  font-size: clamp(38px, 5.4vw, 66px);
+  line-height: 1.08;
+  margin-top: 18px;
+  max-width: 15ch;
+}
+
+.bold-hero h1 em {
+  font-style: italic;
+  color: var(--brand);
+}
+
+.bold-hero .lede {
+  margin-top: 22px;
+  font-size: 17px;
+  max-width: 56ch;
+}
+
+.hero-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.hero-scene {
+  position: relative;
+  padding-top: 20px;
+}
+
+.hero-blob-shape {
+  position: relative;
+}
+
+.hero-blob-shape svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sticker {
+  position: absolute;
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-weight: 800;
+  font-size: 13px;
+  box-shadow: 0 10px 24px rgba(20, 15, 10, 0.12);
+}
+
+.sticker.dark {
+  background: var(--ink);
+  color: #fff;
+  transform: rotate(-6deg);
+}
+
+.sticker.coral {
+  background: var(--brand);
+  color: #fff;
+  transform: rotate(5deg);
+}
+
+.sticker.paper {
+  background: #ffffff;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  transform: rotate(-3deg);
+}
+
+.sticker b {
+  display: block;
+  font-family: var(--serif-display);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sticker span {
+  font-size: 10.5px;
+  font-weight: 700;
+  opacity: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pill-row {
+  margin-top: 32px;
+}
+
+.btn-pill.coral {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.btn-pill.coral:hover {
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
+/* ---------- speech-bubble question cards ---------- */
+
+.bubble-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px 24px;
+}
+
+.bubble-card {
+  position: relative;
+  border-radius: 26px 26px 26px 6px;
+  padding: 32px;
+}
+
+.bubble-card.paper {
+  background: var(--paper-cream);
+  border: 1.5px solid var(--ink);
+}
+
+.bubble-card.dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.bubble-card.coral {
+  background: var(--brand);
+  color: #fff;
+}
+
+.bubble-card h3 {
+  font-family: var(--serif-display);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.32;
+}
+
+.bubble-card.dark h3,
+.bubble-card.coral h3 {
+  color: #fff;
+}
+
+.bubble-card p {
+  font-size: 14.5px;
+  margin-top: 12px;
+  color: var(--ink-soft);
+}
+
+.bubble-card.dark p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.bubble-card.coral p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.bubble-card .text-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13.5px;
+}
+
+.bubble-card.dark .text-link,
+.bubble-card.coral .text-link {
+  color: #fff;
+}
+
+/* ---------- culture band (bold) ---------- */
+
+.culture-band.bold {
+  background: var(--ink);
+  color: #fff;
+}
+
+.culture-band.bold h2 {
+  color: #fff;
+  font-family: var(--serif-display);
+  font-weight: 600;
+}
+
+.culture-band.bold p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {
@@ -974,6 +1201,31 @@ section.tight {
   }
 
   .news-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-scene {
+    order: -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 4px;
+  }
+
+  .hero-blob-shape {
+    display: none;
+  }
+
+  .sticker {
+    position: static !important;
+    transform: none !important;
+  }
+
+  .bubble-grid {
     grid-template-columns: 1fr;
   }
 }
