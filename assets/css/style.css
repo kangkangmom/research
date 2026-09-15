@@ -22,10 +22,11 @@
   --tint-sky: #e9eff2;
   --sage: #6f8259;
 
-  --brand: #ff4d2e;
-  --brand-dark: #d43616;
-  --brand-tint: #fff0ea;
-  --paper-cream: #fffaf3;
+  --deep: #2c1f5e;
+  --brand: #6b4be6;
+  --brand-dark: #533ab8;
+  --brand-tint: #f1edff;
+  --paper-cream: #faf8ff;
 
   --display: "Archivo Black", "Inter", sans-serif;
   --serif-display: "Fraunces", "Newsreader", serif;
@@ -819,7 +820,7 @@ section.tight {
 
 .stat-chip {
   border-radius: 18px;
-  background: var(--tint-sand);
+  background: var(--brand-tint);
   padding: 22px 20px;
   text-align: center;
 }
@@ -875,7 +876,7 @@ section.tight {
 
 .news-card .date {
   font-size: 12.5px;
-  color: var(--warm-dark);
+  color: var(--brand-dark);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -980,12 +981,12 @@ section.tight {
 }
 
 .sticker.dark {
-  background: var(--ink);
+  background: var(--deep);
   color: #fff;
   transform: rotate(-6deg);
 }
 
-.sticker.coral {
+.sticker.accent {
   background: var(--brand);
   color: #fff;
   transform: rotate(5deg);
@@ -1017,12 +1018,12 @@ section.tight {
   margin-top: 32px;
 }
 
-.btn-pill.coral {
+.btn-pill.accent {
   background: var(--brand);
   border-color: var(--brand);
 }
 
-.btn-pill.coral:hover {
+.btn-pill.accent:hover {
   background: var(--brand-dark);
   border-color: var(--brand-dark);
 }
@@ -1047,11 +1048,11 @@ section.tight {
 }
 
 .bubble-card.dark {
-  background: var(--ink);
+  background: var(--deep);
   color: #fff;
 }
 
-.bubble-card.coral {
+.bubble-card.accent {
   background: var(--brand);
   color: #fff;
 }
@@ -1064,7 +1065,7 @@ section.tight {
 }
 
 .bubble-card.dark h3,
-.bubble-card.coral h3 {
+.bubble-card.accent h3 {
   color: #fff;
 }
 
@@ -1078,7 +1079,7 @@ section.tight {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.bubble-card.coral p {
+.bubble-card.accent p {
   color: rgba(255, 255, 255, 0.88);
 }
 
@@ -1089,14 +1090,14 @@ section.tight {
 }
 
 .bubble-card.dark .text-link,
-.bubble-card.coral .text-link {
+.bubble-card.accent .text-link {
   color: #fff;
 }
 
 /* ---------- culture band (bold) ---------- */
 
 .culture-band.bold {
-  background: var(--ink);
+  background: var(--deep);
   color: #fff;
 }
 
